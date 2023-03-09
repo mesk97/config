@@ -138,7 +138,7 @@ export ANSIBLE_CONFIG=./ansible.cfg
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # Start tunnel
-alias start-tunnel='autossh -M 0 -D 5566 s_r.kpakulin@ds-sage-support-1.tcsbank.ru -L 127.0.0.1:16432:pgb-sauron.tcsbank.ru:6432  -L 127.0.0.1:26432:pgb-sauron.tcsbank.ru:6432  -L 127.0.0.1:35432:pgb-sage-grafana.tcsbank.ru:5432 -L 127.0.0.1:15432:postgresql-sage-1.ds.sage.local:5432  -L 127.0.0.1:9202:elasticsearch-sage-4.ds.sage.local:9200'
+alias start-tunnel='autossh -M 0 -D 5566 s_k.pakulin@ds-sage-support-1.tcsbank.ru -L 127.0.0.1:16432:pgb-sauron.tcsbank.ru:6432  -L 127.0.0.1:26432:pgb-sauron.tcsbank.ru:6432  -L 127.0.0.1:35432:pgb-sage-grafana.tcsbank.ru:5432 -L 127.0.0.1:15432:postgresql-sage-1.ds.sage.local:5432  -L 127.0.0.1:9202:elasticsearch-sage-4.ds.sage.local:9200'
 
 cd ~
 
