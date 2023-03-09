@@ -25,8 +25,8 @@ fi
 git config --add user.email k.pakulin@tinkoff.ru
 git config --add user.name k.pakulin
 
-cp -ar .bashrc ~/
-cp -ar .vimrc ~/
-cp -ar .ssh/config ~/.ssh/config
-
+for i in .bashrc .vimrc .ssh/config; do
+	cp -ar $i ~/$i
+	chmod 644 ~/$i
+done
 
