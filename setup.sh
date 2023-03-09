@@ -30,3 +30,6 @@ for i in .bashrc .vimrc .ssh/config; do
 	chmod 644 ~/$i
 done
 
+# for SSH tunnel
+apt install autossh
+
