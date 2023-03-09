@@ -128,16 +128,14 @@ else
 fi
 
 ssh-add ~/.ssh/id_rsa
-ssh-add ~/.ssh/autotest.pem
-ssh-add ~/.ssh/sadogit
 
 copySSHKeys() { cat ~/.ssh/id_rsa.pub | ssh $1 "mkdir -p ~/.ssh/; chmod 700 ~/.ssh; cat >> ~/.ssh/authorized_keys;chmod 600 ~/.ssh/authorized_keys"; }
 copyK8Sconfig() { [[ -z "$2" ]] && echo "$0 <IP> <name>" && return; ssh $1 sudo cat /root/.kube/config > ~/.kube/config_$2 && ln -sf ~/.kube/config_$2 ~/.kube/config; }
 
-
 export ANSIBLE_CONFIG=./ansible.cfg 
-
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+cd ~
 
