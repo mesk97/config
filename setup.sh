@@ -5,8 +5,11 @@ set -e
 
 CODEDIR=~/code
 
+# 0. download 
+#	wget https://raw.githubusercontent.com/mesk97/config/master/setup.sh
 # 1. generate ssh-keygen
 # 2. add id_rsa.pub https://github.com/settings/ssh/new
+# 3. run setup.sh
 
 if [[ ! -L $CODEDIR ]]; then 
 	# create code repo 
