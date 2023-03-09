@@ -16,7 +16,11 @@ if [[ ! -L $CODEDIR ]]; then
 	cd ~/code
        	
 	git clone git@github.com:mesk97/config.git
+	cd config
 fi
+
+git config --add user.email k.pakulin@tinkoff.ru
+git config --add user.name k.pakulin
 
 cp -ar .bashrc ~/
 cp -ar .vimrc ~/
