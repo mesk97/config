@@ -22,8 +22,8 @@ if [[ ! -L $CODEDIR ]]; then
 	cd config
 fi
 
-git config --add user.email k.pakulin@tinkoff.ru
-git config --add user.name k.pakulin
+git config --global --add user.email k.pakulin@tinkoff.ru
+git config --global --add user.name k.pakulin
 
 for i in .bashrc .vimrc .ssh/config; do
 	cp -ar $i ~/$i
@@ -33,5 +33,7 @@ done
 apt-get update
 
 # for SSH tunnel
-apt-get install autossh
+for i in autossh net-tools dos2unix; do
+	apt-get install $i
+done
 
